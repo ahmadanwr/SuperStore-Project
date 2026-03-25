@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO Mart - Products & Categories</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        }
+        .product.hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to GO Mart</h1>
+        <p>Premium groceries and everyday items</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="delivery.html">Delivery</a>
+            <a href="payment.html">Payment</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="page-title">Shop Our Products</h2>
+        
+        <div class="category-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="bakery">Bakery</button>
+            <button class="filter-btn" data-filter="produce">Fresh Produce</button>
+            <button class="filter-btn" data-filter="dairy">Dairy</button>
+            <button class="filter-btn" data-filter="pantry">Pantry</button>
+            <button class="filter-btn" data-filter="beverages">Beverages</button>
+        </div>
+
+        <div class="product-container" id="product-grid">
+            
+            <!-- Bakery -->
+            <div class="product" data-category="bakery">
+                <img src="assets/baladi_bread.jpg" alt="Baladi Bread">
+                <div class="product-content">
+                    <h3 class="title">Baladi Bread</h3>
+                    <p class="desc">20 Pieces</p>
+                    <h3 class="price">20 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="bakery">
+                <img src="assets/croissant.jpg" alt="Chocolate Croissant">
+                <div class="product-content">
+                    <h3 class="title">Chocolate Croissant</h3>
+                    <p class="desc">Freshly Baked Pastry</p>
+                    <h3 class="price">45 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="bakery">
+                <img src="assets/baguette.jpg" alt="Baguette">
+                <div class="product-content">
+                    <h3 class="title">French Baguette</h3>
+                    <p class="desc">Crusty artisan loaf</p>
+                    <h3 class="price">30 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+
+            <!-- Produce -->
+            <div class="product" data-category="produce">
+                <img src="assets/apple.png" alt="Apple">
+                <div class="product-content">
+                    <h3 class="title">Fresh Apples</h3>
+                    <p class="desc">1kg Premium Pack</p>
+                    <h3 class="price">70 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="produce">
+                <img src="assets/potato.jpg" alt="Potato">
+                <div class="product-content">
+                    <h3 class="title">Fresh Potatoes</h3>
+                    <p class="desc">1kg Bag</p>
+                    <h3 class="price">22 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="produce">
+                <img src="assets/tomato.jpg" alt="Tomato">
+                <div class="product-content">
+                    <h3 class="title">Tomato</h3>
+                    <p class="desc">1kg Handpicked</p>
+                    <h3 class="price">23 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="produce">
+                <img src="assets/avocado.jpg" alt="Avocado">
+                <div class="product-content">
+                    <h3 class="title">Hass Avocados</h3>
+                    <p class="desc">500g Ready to Eat</p>
+                    <h3 class="price">120 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="produce">
+                <img src="assets/strawberries.jpg" alt="Strawberries">
+                <div class="product-content">
+                    <h3 class="title">Fresh Strawberries</h3>
+                    <p class="desc">250g Punnet</p>
+                    <h3 class="price">55 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="produce">
+                <img src="assets/bananas.jpg" alt="Bananas">
+                <div class="product-content">
+                    <h3 class="title">Bananas</h3>
+                    <p class="desc">1kg Fresh Bunch</p>
+                    <h3 class="price">30 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+
+            <!-- Dairy & Eggs -->
+            <div class="product" data-category="dairy">
+                <img src="assets/milk.jpg" alt="Milk">
+                <div class="product-content">
+                    <h3 class="title">Juhayna Milk</h3>
+                    <p class="desc">1 liter Bottle</p>
+                    <h3 class="price">73 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="dairy">
+                <img src="assets/cheddar.jpg" alt="Cheese">
+                <div class="product-content">
+                    <h3 class="title">Cheddar Cheese</h3>
+                    <p class="desc">250g Block</p>
+                    <h3 class="price">150 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="dairy">
+                <img src="assets/yogurt.jpg" alt="Greek Yogurt">
+                <div class="product-content">
+                    <h3 class="title">Greek Yogurt</h3>
+                    <p class="desc">170g Cup</p>
+                    <h3 class="price">28 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+
+            <!-- Pantry -->
+            <div class="product" data-category="pantry">
+                <img src="assets/rice.jpg" alt="Rice">
+                <div class="product-content">
+                    <h3 class="title">Al Doha Rice</h3>
+                    <p class="desc">1kg Premium Pack</p>
+                    <h3 class="price">48 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="pantry">
+                <img src="assets/pasta.jpg" alt="Pasta">
+                <div class="product-content">
+                    <h3 class="title">Italiano Pasta</h3>
+                    <p class="desc">400gm Pack</p>
+                    <h3 class="price">19 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="pantry">
+                <img src="assets/cornflakes.jpg" alt="Corn Flakes">
+                <div class="product-content">
+                    <h3 class="title">Corn Flakes</h3>
+                    <p class="desc">1kg Box</p>
+                    <h3 class="price">175 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="pantry">
+                <img src="assets/flour.jpg" alt="Flour">
+                <div class="product-content">
+                    <h3 class="title">All-Purpose Flour</h3>
+                    <p class="desc">1kg Bag</p>
+                    <h3 class="price">25 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+
+            <!-- Beverages -->
+            <div class="product" data-category="beverages">
+                <img src="assets/cola.jpg" alt="V7 Cola">
+                <div class="product-content">
+                    <h3 class="title">V7 Cola</h3>
+                    <p class="desc">175ml Refreshment</p>
+                    <h3 class="price">15 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="assets/water.jpg" alt="Water">
+                <div class="product-content">
+                    <h3 class="title">Elano Water Carton</h3>
+                    <p class="desc">600ml x20 Pack</p>
+                    <h3 class="price">95 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="assets/chocomilk.jpg" alt="Chocolate Milk">
+                <div class="product-content">
+                    <h3 class="title">Nestlé Chocolate Milk</h3>
+                    <p class="desc">285g Bottle</p>
+                    <h3 class="price">89 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="assets/coffee.jpg" alt="Coffee Beans">
+                <div class="product-content">
+                    <h3 class="title">Espresso Beans</h3>
+                    <p class="desc">250g Dark Roast</p>
+                    <h3 class="price">210 EGP</h3>
+                    <a href="delivery.html" class="btn">Proceed to Buy</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GO Mart Superstore.</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.filter-btn');
+        const products = document.querySelectorAll('.product');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+
+                products.forEach(product => {
+                    if(filter === 'all' || product.getAttribute('data-category') === filter) {
+                        product.classList.remove('hidden');
+                    } else {
+                        product.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
